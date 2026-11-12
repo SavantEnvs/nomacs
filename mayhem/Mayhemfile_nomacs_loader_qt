@@ -1,0 +1,9 @@
+project: savantenvs/nomacs
+target: nomacs_loader_qt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nomacs_loader_qt/testsuite
+cmds:
+  - cmd: /mayhem/nomacs_loader_qt
+    libfuzzer: true
+    timeout: 30
